@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year v.02</title>
+</head>
+<body>
+    <script>
+        function countDown(start) {
+            console.log(start);
+            let nextNumber = start - 1;
+            if (nextNumber > 0) {
+                //countDown(nextNumber); // call the function within itself to create recursion.
+                setTimeout(countDown, 1000, nextNumber); // +1-second delay between recursion
+            }  else {
+                //console.log("HAPPY NEW YEAR!");
+                setTimeout(function(){console.log("HAPPY NEW YEAR!");}, 1000, nextNumber);
+            }
+
+        }
+
+        var count = parseInt(prompt("How many seconds before the ball drops?"));
+        countDown(start)
+
+    </script>
+
+</body>
+</html>
